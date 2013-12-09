@@ -1,25 +1,26 @@
-;;; benfu.el --- benfu-mode, a home for some personal emacs extensions
+;;; benfu.el --- Provides benfu-mode. The home of some personal Emacs extensions
 
 ;; Copyright 2013 Benjamin Cluff
 
-;;; Author: Benjamin Cluff <psyllo@gmail.com>
-;;; URL: https://gist.com/psyllo/
-;;; Created: 05-Dec-2013
-;;; Version: 20131205.0001
-;;; Keywords: personal
+;; Author: Benjamin Cluff <psyllo@gmail.com>
+;; URL: https://github.com/psyllo/benfu.el
+;; Created: 05-Dec-2013
+;; Version: 20131205.0001
+;; Keywords: personal
 
-;; Synopsis
+;;; Synopsis:
 ;;   * Code for just about anything that doesn't have its own project/package.
 ;;   * Things to do with working in lisp dialects.
 ;;   * Paredit key binding adjustments for things like Macs and terminals.
 ;;   * Ad-hoc keyboard macros for various things.
 ;;   * Niceties like: `benfu-undo-until-reverted'
-;;
-;; Usage - standard usage
+
+
+;;: Usage 1:
 ;;   (require 'benfu-mode)
 ;;   (setq benfu-mode t)
 ;;
-;; Usage - an alternate usage that uses autoload
+;;; Usage 2:
 ;;   (let ((benfu-file "benfu-autoloads"))
 ;;     ;; I want to see errors in my elisp, so don't hide them.
 ;;     (condition-case nil
@@ -28,15 +29,12 @@
 ;;        (warn "benfu: Failed to load '%s' - continuing anyway" benfu-file))))
 ;;
 
-;;; Considering using a separately defined sparse keymap for direct access.
-;; (defvar benfu-mode-map (make-sparse-keymap)
-;;   "Benfu mode map.")
 
 (defgroup benfu-mode nil
   "Benfu is a minor mode for Benjamin Cluff's personal emacs extensions.
    Not designed for others."
   :prefix "benfu-"
-  :group 'programming)
+  :group 'personal)
 
 (defcustom benfu-menu-string "Benfu"
   "The string that appears in the menu.")
@@ -70,9 +68,9 @@
     ("\C-cpn"  . paredit-add-to-next-list)
     ("\C-cpp"  . paredit-add-to-previous-list)
 
-    ;; mark-sexp keys for Mac + terminal
-    ("\C-c "   . mark-sexp)
-    ("\C-cp "  . mark-sexp)
+    ;; mark-sexp (C-M-SPC) keys for Mac + terminal
+    ("\C-c "   . mark-sexp) ; A portable convenient alternative to C-M-SPC
+    ("\M-[ "   . mark-sexp) ; Bind to the sequence I configured iTerm2 to send
 
     ;; magit related
     ("\C-cbg"   . magit-status))
