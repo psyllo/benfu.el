@@ -1,26 +1,25 @@
-;;; benfu.el - benfu-mode, a home for some personal emacs extensions
+;;; benfu.el --- benfu-mode, a home for some personal emacs extensions
 
 ;; Copyright 2013 Benjamin Cluff
 
-;; Author: Benjamin Cluff <psyllo@gmail.com>
-;; URL: https://gist.com/psyllo/
-;; Created: 05-Dec-2013
-;; Version: 20131205.0001
-;; Keywords: personal
-;; Package-Requires: ((levenshtein "1.0"))
-;;
-;; Synopsis:
+;;; Author: Benjamin Cluff <psyllo@gmail.com>
+;;; URL: https://gist.com/psyllo/
+;;; Created: 05-Dec-2013
+;;; Version: 20131205.0001
+;;; Keywords: personal
+
+;; Synopsis
 ;;   * Code for just about anything that doesn't have its own project/package.
 ;;   * Things to do with working in lisp dialects.
 ;;   * Paredit key binding adjustments for things like Macs and terminals.
 ;;   * Ad-hoc keyboard macros for various things.
 ;;   * Niceties like: `benfu-undo-until-reverted'
 ;;
-;; Usage - standard usage:
+;; Usage - standard usage
 ;;   (require 'benfu-mode)
 ;;   (setq benfu-mode t)
 ;;
-;; Usage - an alternate usage that uses autoload.
+;; Usage - an alternate usage that uses autoload
 ;;   (let ((benfu-file "benfu-autoloads"))
 ;;     ;; I want to see errors in my elisp, so don't hide them.
 ;;     (condition-case nil
