@@ -15,11 +15,10 @@
 ;;   * Ad-hoc keyboard macros for various things.
 ;;   * Niceties like: `benfu-undo-until-reverted'
 
-
-;;: Usage 1:
+;;; Usage 1:
 ;;   (require 'benfu-mode)
 ;;   (setq benfu-mode t)
-;;
+
 ;;; Usage 2:
 ;;   (let ((benfu-file "benfu-autoloads"))
 ;;     ;; I want to see errors in my elisp, so don't hide them.
@@ -54,6 +53,7 @@
   ;; The minor mode bindings.
   :keymap
   '(("\C-cbu"  . benfu-undo-until-reverted)
+    ("\C-c;"   . benfu-comment-sexp)
 
     ;; paredit keys for Mac + terminals
     ("\C-cw"   . paredit-copy-as-kill)
@@ -102,6 +102,12 @@
   (while (buffer-modified-p)
     (undo-more 1))
   (message "benfu: Buffer was undone until no longer modified."))
+
+(defun benfu-comment-sexp ()
+  "Essentially `mark-sexp' then `comment-sexp'"
+  (interactive)
+  (fset 'benfu-comment-sexp-kbd-macro "\C-[xmark-sexp\C-m\C-[;")
+  (execute-kbd-macro 'benfu-comment-sexp-kbd-macro))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
