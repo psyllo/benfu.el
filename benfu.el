@@ -1,4 +1,4 @@
-;;; benfu.el --- Provides benfu-mode. The home of some personal Emacs extensions
+;;; benfu.el --- The home of some personal Emacs extensions
 
 ;; Copyright 2013 Benjamin Cluff
 
@@ -15,18 +15,9 @@
 ;;   * Ad-hoc keyboard macros for various things.
 ;;   * Niceties like: `benfu-undo-until-reverted'
 
-;;; Usage 1:
-;;   (require 'benfu-mode)
+;;; Usage:
+;;   (require 'benfu)
 ;;   (setq benfu-mode t)
-
-;;; Usage 2:
-;;   (let ((benfu-file "benfu-autoloads"))
-;;     ;; I want to see errors in my elisp, so don't hide them.
-;;     (condition-case nil
-;;         (load benfu-file)
-;;       (file-error
-;;        (warn "benfu: Failed to load '%s' - continuing anyway" benfu-file))))
-;;
 
 
 (defgroup benfu-mode nil
@@ -73,7 +64,7 @@
     ("\M-[ "   . mark-sexp) ; Bind to the sequence I configured iTerm2 to send
 
     ;; magit related
-    ("\C-cbg"   . magit-status))
+    ("\C-cbg"  . magit-status))
   :group 'benfu-mode)
 
 ;;;; Non-interactive functions
@@ -111,6 +102,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(provide 'benfu-mode)
+(provide 'benfu)
 
 ;;; benfu.el ends here
