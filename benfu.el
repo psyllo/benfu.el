@@ -48,23 +48,32 @@
 
     ;; paredit keys for Mac + terminals
     ("\C-cw"   . paredit-copy-as-kill)
-    ("\C-cpw"  . paredit-copy-as-kill)
-    ("\C-cpfs" . paredit-forward-slurp-sexp)
-    ("\C-cpbs" . paredit-backward-slurp-sexp)
-    ("\C-cpfb" . paredit-forward-barf-sexp)
-    ("\C-cpbb" . paredit-backward-barf-sexp)
+    ;; ("\C-cbw"  . paredit-copy-as-kill)
+    ;; ("\C-cbfs" . paredit-forward-slurp-sexp)
+    ;; ("\C-cbbs" . paredit-backward-slurp-sexp)
+    ;; ("\C-cbfb" . paredit-forward-barf-sexp)
+    ;; ("\C-cbbb" . paredit-backward-barf-sexp)
+
+    ;; paredit with Hyper key
+    ;; ([(hyper ?f)] . paredit-forward-slurp-sexp)
+    ;; ([(hyper ?b)] . paredit-forward-barf-sexp)
+    ;; ([(hyper ?p)] . paredit-convolute-sexp)
+    ;; ([(hyper ?n)] . paredit-backward-slurp-sexp)
+    ;; ([(hyper ?r)] . paredit-raise-sexp)
+    ;; ([(hyper ?s)] . paredit-splice-sexp)
+    ;; ([(hyper ?\()] . paredit-wrap-round) ;; paredit overrides this :(
+    ;; ([(hyper ?\{)] . paredit-wrap-curly)
+    ;; ([(hyper ?\|)] . paredit-wrap-square)
 
     ;; paredit functions not bound be default
     ;; NOTE: The following 2 are related to paredit-join-sexps (M-J)
-    ("\C-cpn"  . paredit-add-to-next-list)
-    ("\C-cpp"  . paredit-add-to-previous-list)
+    ("\C-c[n"  . paredit-add-to-next-list)
+    ("\C-c[p"  . paredit-add-to-previous-list)
 
     ;; mark-sexp (C-M-SPC) keys for Mac + terminal
     ("\C-c "   . mark-sexp) ; A portable convenient alternative to C-M-SPC
     ("\M-[ "   . mark-sexp) ; Bind to the sequence I configured iTerm2 to send
-
-    ;; magit related
-    ("\C-cbg"  . magit-status))
+    )
   :group 'benfu-mode)
 
 ;;;; Non-interactive functions
