@@ -43,7 +43,8 @@
   :global t
   ;; The minor mode bindings.
   :keymap
-  '(("\C-cbu"  . benfu-undo-until-reverted)
+  '(("\C-s"    . isearch-forward)
+    ("\C-cbu"  . benfu-undo-until-reverted)
     ("\C-c;"   . benfu-comment-sexp)
 
     ;; paredit keys for Mac + terminals
