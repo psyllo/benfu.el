@@ -50,21 +50,21 @@
     ;; paredit keys for Mac + terminals
     ("\C-cw"   . paredit-copy-as-kill)
     ;; ("\C-cbw"  . paredit-copy-as-kill)
-    ;; ("\C-cbfs" . paredit-forward-slurp-sexp)
-    ;; ("\C-cbbs" . paredit-backward-slurp-sexp)
+    ("\C-cpfs" . paredit-forward-slurp-sexp)
+    ("\C-cpbs" . paredit-backward-slurp-sexp)
     ;; ("\C-cbfb" . paredit-forward-barf-sexp)
     ;; ("\C-cbbb" . paredit-backward-barf-sexp)
 
     ;; paredit with Hyper key
-    ;; ([(hyper ?f)] . paredit-forward-slurp-sexp)
-    ;; ([(hyper ?b)] . paredit-forward-barf-sexp)
-    ;; ([(hyper ?p)] . paredit-convolute-sexp)
-    ;; ([(hyper ?n)] . paredit-backward-slurp-sexp)
-    ;; ([(hyper ?r)] . paredit-raise-sexp)
+    ([(hyper ?f)] . paredit-forward-slurp-sexp)
+    ([(hyper ?b)] . paredit-forward-barf-sexp)
+    ([(hyper ?p)] . paredit-convolute-sexp)
+    ([(hyper ?n)] . paredit-backward-slurp-sexp)
+    ([(hyper ?r)] . paredit-raise-sexp)
     ;; ([(hyper ?s)] . paredit-splice-sexp)
-    ;; ([(hyper ?\()] . paredit-wrap-round) ;; paredit overrides this :(
-    ;; ([(hyper ?\{)] . paredit-wrap-curly)
-    ;; ([(hyper ?\|)] . paredit-wrap-square)
+    ([(hyper ?\()] . paredit-wrap-round) ;; paredit overrides this :(
+    ([(hyper ?\{)] . paredit-wrap-curly)
+    ([(hyper ?\|)] . paredit-wrap-square)
 
     ;; paredit functions not bound be default
     ;; NOTE: The following 2 are related to paredit-join-sexps (M-J)
@@ -74,6 +74,9 @@
     ;; mark-sexp (C-M-SPC) keys for Mac + terminal
     ("\C-c "   . mark-sexp) ; A portable convenient alternative to C-M-SPC
     ("\M-[ "   . mark-sexp) ; Bind to the sequence I configured iTerm2 to send
+
+    ;; spacemacs
+    ("\C-cz" . spacemacs/toggle-holy-mode)
     )
   :group 'benfu-mode)
 
