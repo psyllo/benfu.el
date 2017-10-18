@@ -114,9 +114,9 @@
   (fset 'benfu-comment-sexp-kbd-macro "\C-[xmark-sexp\C-m\C-[;")
   (execute-kbd-macro 'benfu-comment-sexp-kbd-macro))
 
-(defun benfu-buffer-file-name ()
+(defun benfu-buffer-file-name (&optional buffer)
   (interactive)
-  (message (buffer-file-name)))
+  (message (buffer-file-name buffer)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
