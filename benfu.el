@@ -38,7 +38,7 @@
   ;; The initial value.
   :init-value nil
   ;; The indicator for the mode line.
-  :lighter " Benfu"
+  :lighter " ß"
   ;; This mode is best as a global minor mode
   :global t
   ;; The minor mode bindings.
