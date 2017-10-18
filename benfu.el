@@ -45,6 +45,7 @@
   :keymap
   '(("\C-s"    . isearch-forward)
     ("\C-cbu"  . benfu-undo-until-reverted)
+    ("\C-cbf"  . benfu-buffer-file-name)
     ("\C-c;"   . benfu-comment-sexp)
 
     ;; paredit keys for Mac + terminals
@@ -112,6 +113,10 @@
   (interactive)
   (fset 'benfu-comment-sexp-kbd-macro "\C-[xmark-sexp\C-m\C-[;")
   (execute-kbd-macro 'benfu-comment-sexp-kbd-macro))
+
+(defun benfu-buffer-file-name ()
+  (interactive)
+  (message (buffer-file-name)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
