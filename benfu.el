@@ -78,6 +78,7 @@
 
     ;; spacemacs
     ("\C-cz" . spacemacs/toggle-holy-mode)
+    ("\C-cm"   . call-last-kbd-macro)
     )
   :group 'benfu-mode)
 
